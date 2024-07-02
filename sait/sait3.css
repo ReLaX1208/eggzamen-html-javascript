@@ -1,0 +1,836 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@100&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#naming{
+  padding: 27px 20px;
+}
+#negeradot{
+height: 100%;
+color: white;
+cursor: auto;
+}
+#naming{
+cursor: auto;
+color: white;
+}
+#nocursor{
+cursor: auto;
+color: white;
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 750px; 
+}
+
+.slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.slider img.active {
+  opacity: 1;
+  z-index: 1;
+}
+#Exit{
+  background-image: url(icons8-выход-24.png);
+  width: 20px;
+  background-size: 100%;
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  margin-top: 25px;
+}
+.cursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: rgb(23, 136, 180);
+  border: #000000 1px solid;
+  opacity: 0.5;
+  position: fixed;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9;
+}
+.page{
+margin: 0;
+padding: 0;
+}
+.progress_line{
+  height: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, rgb(2, 238, 255) 0%, rgba(255,0,172,1) 100%);
+  z-index: 100;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: black;
+    position: fixed;
+    z-index: 3;
+}
+.inner_header{
+    width: 1300px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: BLACK;
+}
+.logo{
+    height: 100%;
+    display: table;
+    float: left;
+}
+.logo h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 32px;
+
+}
+.nav{
+    float: right;
+    height: 100%;
+}
+.nav p{
+  float: left;
+    height: 100%;
+}
+.nav a{
+    height: 100%;
+    float: left;
+    display: table;
+
+    padding: 0 20px;
+}
+.nav li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+}
+img{
+    height: 60px;
+    width: 50px;
+    padding-top: 17px;
+    padding-right: 5px;
+}
+.footer{
+    background-color: #24262b;
+    padding: 70px 0;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+ul{
+    list-style: none;
+}
+.footer-col{
+width: 25%;
+padding: 0 15px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+body{
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+  width: 45%;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    color: grey;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: white;
+    padding-left: 8px;  
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+text-align: center;
+line-height: 40px;
+border-radius: 40%;
+color: white;
+transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+color: black;
+background-color: white;
+}
+@media screen and (max-width:851px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+        }
+    .inner_header{
+        width: 50%;
+        }
+}
+@media screen and (max-width:574px){
+    .footer-col{
+        width: 100%;
+        }
+    .inner_header{
+        width: 100%;
+        }
+}
+.social-links img{
+    height: 60px;
+    width: 40px;
+    padding-bottom: 10px;
+}
+a{
+    text-decoration: none;
+}
+
+
+  .header input[type=text] {
+    margin-top: 20px;
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 10px;
+    float: left;
+    background-color: white;
+    background-image: url('icons8-поиск-100.png');
+    background-size: 15px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .header input[type=text]:focus {
+    width: 16%;
+  }
+  .container12 input[type=text]:focus{
+    width: 100%;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+
+.container12 input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  .container12 input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  button {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 14px 20px;
+    margin: 18px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  .container12{
+    padding: 16px;
+  }
+  
+
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  
+
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }
+  @media screen and (max-width: 851px) {
+.inner_header, .header {
+       height: 200px;
+       padding-bottom: 140px;
+    }
+  }
+  
+.almostfooter{
+  padding-top: 300px;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), 30%, rgb(5, 41, 92), 70%, rgb(40, 39, 39));
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+}
+.almostfooter img{
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  height: 80px;
+  width: 80px;
+  left: 43%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+  
+}
+.almostfooter a{
+color: white;
+}
+
+.almostfooter h1{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+.brands{
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(100, 3, 3), rgb(0, 0, 0));
+  color: white;
+  text-align: center;
+  padding: 1px;
+  height: auto;
+  padding-bottom: 50px;
+}
+.brand{
+background-image: url(1.jpg);
+width: 300px;
+height: 500px;
+display: inline-block;
+background-repeat: no-repeat;
+background-size: 300%;
+background-position: -145px 0px;
+transition: 0.7s;
+margin: 10px;
+}
+.brands h1{
+margin:130px 0 50px;
+}
+.loga4{
+background-image: url(pagani.png);
+width: 150px;
+height: 100px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 80%;
+}
+.loga{
+background-image: url(mclaren.png);
+width: 150px;
+height: 100px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+}
+.loga1{
+background-image: url(lambo.png);
+width: 150px;
+height: 100px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+}
+.loga2{
+background-image: url(ferarri.png);
+width: 150px;
+height: 100px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+}
+.loga3{
+background-image: url(merc.png);
+width: 150px;
+height: 100px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 50%;
+}
+.loga5{
+background-image: url(mas.png);
+width: 150px;
+height: 100px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 110%;
+}
+.loga6{
+background-image: url(audi.png);
+width: 150px;
+height: 100px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+}
+.loga7{
+background-image: url(bugatti.png);
+width: 150px;
+height: 100px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 80%;
+}
+.loga8{
+  background-image: url(bmw.png);
+  width: 150px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  }
+  .loga9{
+    background-image: url(aston.webp);
+    width: 150px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    }
+    .loga10{
+      background-image: url(bentley.png);
+      width: 150px;
+      height: 100px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 80%;
+      }
+      .loga11{
+        background-image: url(porsche.png);
+        width: 150px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 40%;
+        }
+        .loga12{
+          background-image: url(jaguar.png);
+          width: 150px;
+          height: 100px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 80%;
+          }
+          .loga13{
+            background-image: url(rolce.png);
+            width: 150px;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 60%;
+            }
+
+
+.loga14{
+background-image: url(lotus.webp);
+width: 150px;
+height: 100px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 50%;
+}
+.loga15{
+  background-image: url(koen.png);
+  width: 150px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  }
+  .loga16{
+    background-image: url(ford.png);
+    width: 150px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    }
+    .loga17{
+      background-image: url(noble.png);
+      width: 150px;
+      height: 100px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 80%;
+      }
+
+.brand1{
+background-image: url(2.jpg);
+width: 300px;
+height: 500px;
+display: inline-block;
+background-repeat: no-repeat;
+background-size: 400%;
+background-position: -230px -160px;
+transition: 0.7s;
+margin: 10px;
+}
+.brand2{
+background-image: url(3.jpg);
+width: 300px;
+height: 500px;
+display: inline-block;
+background-repeat: no-repeat;
+background-size: 350%;
+background-position: -230px -60px;
+transition: 0.7s;
+margin: 10px;
+}
+.brand3{
+background-image: url(4.jpg);
+width: 300px;
+height: 500px;
+display: inline-block;
+background-repeat: no-repeat;
+background-size: 400%;
+background-position: -293px -160px;
+transition: 0.7s;
+margin: 10px;
+}
+.brand4{
+background-image: url(6.jpg);
+width: 300px;
+height: 500px;
+display: inline-block;
+background-repeat: no-repeat;
+background-size: 300%;
+background-position: -130px -120px;
+transition: 0.7s;
+margin: 10px;
+}
+.brand5{
+background-image: url(7.jpg);
+width: 300px;
+height: 500px;
+display: inline-block;
+background-repeat: no-repeat;
+background-size: 300%;
+background-position: -155px 0px;
+transition: 0.7s;
+margin: 10px;
+}
+.brand6{
+background-image: url(8.jpg);
+width: 300px;
+height: 500px;
+display: inline-block;
+background-repeat: no-repeat;
+background-size: 300%;
+background-position: -140px 0px;
+transition: 0.7s;
+margin: 10px;
+}
+.brand7{
+background-image: url(9.jpg);
+width: 300px;
+height: 500px;
+display: inline-block;
+background-repeat: no-repeat;
+background-size: 400%;
+background-position: -300px -80px;
+transition: 0.7s;
+margin: 10px;
+}
+.brand8{
+  background-image: url(10.jpg);
+  width: 300px;
+  height: 500px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-position: -150px 0px;
+  transition: 0.7s;
+  margin: 10px;
+  }
+  .brand9{
+    background-image: url(11.jpg);
+    width: 300px;
+    height: 500px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 300%;
+    background-position: -120px 0px;
+    transition: 0.7s;
+    margin: 10px;
+    }
+    .brand10{
+      background-image: url(12.jpg);
+      width: 300px;
+      height: 500px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: 300%;
+      background-position: -150px 0px;
+      transition: 0.7s;
+      margin: 10px;
+      }
+      .brand11{
+        background-image: url(13.jpg);
+        width: 300px;
+        height: 500px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: 300%;
+        background-position: -120px 0px;
+        transition: 0.7s;
+        margin: 10px;
+        }
+        .brand12{
+          background-image: url(14.jpg);
+          width: 300px;
+          height: 500px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-size: 400%;
+          background-position: -300px -80px;
+          transition: 0.7s;
+          margin: 10px;
+          }
+          .brand13{
+            background-image: url(15.jpg);
+            width: 300px;
+            height: 500px;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: 300%;
+            background-position: -140px 0px;
+            transition: 0.7s;
+            margin: 10px;
+            }
+            .brand14{
+              background-image: url(16.jpg);
+              width: 300px;
+              height: 500px;
+              display: inline-block;
+              background-repeat: no-repeat;
+              background-size: 300%;
+              background-position: -160px 0px;
+              transition: 0.7s;
+              margin: 10px;
+              }
+              .brand15{
+                background-image: url(17.jpg);
+                width: 300px;
+                height: 500px;
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-size: 300%;
+                background-position: -100px 0px;
+                transition: 0.7s;
+                margin: 10px;
+                }
+                .brand16{
+                  background-image: url(18.jpg);
+                  width: 300px;
+                  height: 500px;
+                  display: inline-block;
+                  background-repeat: no-repeat;
+                  background-size: 300%;
+                  background-position: -140px 0px;
+                  transition: 0.7s;
+                  margin: 10px;
+                  }
+                  .brand17{
+                    background-image: url(19.jpg);
+                    width: 300px;
+                    height: 500px;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-size: 300%;
+                    background-position: -140px 0px;
+                    transition: 0.7s;
+                    margin: 10px;
+                    }
+.brands input[type="button"]{
+background-color: rgb(20, 39, 121);
+cursor: pointer;
+border: none;
+margin-top: 90px;
+color: white;
+width: 100px;
+height: 60px;
+border-radius: 5px;
+font-family: 'Poppins', sans-serif;
+font-size: 20px;
+}
+  
+marquee{
+  background-color: rgb(0, 0, 0);
+  margin-bottom: -10px;
+}
+marquee img{
+  width: 150px;
+  height: 120px;
+  cursor: pointer;
+  margin-top: -5px;
+  margin-left: 50px;
+}
+.brand:hover{
+transform: scale(1.05)
+}
+.brand1:hover{
+transform: scale(1.05)
+}
+.brand2:hover{
+transform: scale(1.05)
+}
+.brand3:hover{
+transform: scale(1.05)
+}
+.brand4:hover{
+transform: scale(1.05)
+}
+.brand5:hover{
+transform: scale(1.05)
+}
+.brand6:hover{
+transform: scale(1.05)
+}
+.brand7:hover{
+transform: scale(1.05)
+}
+.brand8:hover{
+  transform: scale(1.05)
+  }
+  .brand9:hover{
+  transform: scale(1.05)
+  }
+  .brand10:hover{
+  transform: scale(1.05)
+  }
+  .brand11:hover{
+  transform: scale(1.05)
+  }
+  .brand12:hover{
+  transform: scale(1.05)
+  }
+  .brand13:hover{
+  transform: scale(1.05)
+  }
+  .brand14:hover{
+  transform: scale(1.05)
+  }
+  .brand15:hover{
+  transform: scale(1.05)
+  }
+  .brand16:hover{
+    transform: scale(1.05)
+    }
+    .brand17:hover{
+      transform: scale(1.05)
+      }
